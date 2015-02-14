@@ -12,7 +12,7 @@ end
 
 rows = 10
 cols = 8
-qrSize = 150
+qrSize = 200
 xMargin = 20
 yMargin = xMargin*2
 
@@ -34,7 +34,7 @@ for row in 1..rows
     if true
       draw.annotate(largeImage, qrSize, yMargin, (col-1)*(qrSize+xMargin), (row-1)*(qrSize+yMargin)+qrSize-10, "HQR#{id}") do
         self.font = 'Helvetica'
-        self.pointsize = 26
+        self.pointsize = 40
         #self.font_weight = Magick::BoldWeight
         self.fill = 'black'
         self.gravity = Magick::CenterGravity
