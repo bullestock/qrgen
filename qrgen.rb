@@ -3,7 +3,7 @@ include Magick
 require 'rqrcode_png'
 
 def MakeQRImage(id, qrSize)
-  url = "qr.hal9k.dk/HQR#{id}"
+  url = "http://qr.hal9k.dk/HQR#{id}"
   qr = RQRCode::QRCode.new(url, :size => 4, :level => :h)
   png = qr.to_img.resize(qrSize, qrSize)
   png.save('temp.png')
